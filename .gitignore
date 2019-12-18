@@ -1,0 +1,6 @@
+# Ignore files created by antlr4
+*.java
+*.class
+*.interp
+*.tokens
+
