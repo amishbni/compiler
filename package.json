@@ -27,5 +27,8 @@
   "bugs": {
     "url": "https://github.com/amirashabani/compiler/issues"
   },
-  "homepage": "https://github.com/amirashabani/compiler#readme"
+  "homepage": "https://github.com/amirashabani/compiler#readme",
+  "devDependencies": {
+    "electron": "^7.1.7"
+  }
 }
