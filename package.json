@@ -1,0 +1,31 @@
+{
+  "name": "compiler",
+  "version": "1.0.0",
+  "description": "Compiler Project - SONEC language",
+  "main": "main.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amirashabani/compiler.git"
+  },
+  "keywords": [
+    "Compiler",
+    "SONEC",
+    "editor",
+    "programming",
+    "language",
+    "Social",
+    "Media"
+  ],
+  "author": "Amir A. Shabani, Faramarz FalsafiNejad",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/amirashabani/compiler/issues"
+  },
+  "homepage": "https://github.com/amirashabani/compiler#readme"
+}
