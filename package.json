@@ -7,7 +7,7 @@
     "test": "tests"
   },
   "scripts": {
-    "start": "electron ."
+    "start": "electron . --disable-gpu"
   },
   "repository": {
     "type": "git",
