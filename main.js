@@ -12,6 +12,7 @@ function create_main_window() {
 	});
 
 	main_window.loadFile("assets/html/main_window.html");
+	main_window.removeMenu();
 	main_window.webContents.openDevTools();
 	main_window.on("closed", () => {
 		main_window = null;
