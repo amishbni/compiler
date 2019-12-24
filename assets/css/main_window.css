@@ -1,0 +1,8 @@
+body {
+	font-family: "Hack";
+}
+
+@font-face {
+	font-family: "Hack";
+	src: url("../font/Hack-Regular.ttf") format("truetype");
+}
