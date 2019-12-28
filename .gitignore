@@ -10,3 +10,6 @@
 # Virtual Environment directory
 /venv
 
+# pycache directory
+/__pycache__
+
