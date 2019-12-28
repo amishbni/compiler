@@ -1,9 +1,12 @@
-# Ignore files created by antlr4
+# files created by antlr4
 *.java
 *.class
 *.interp
 *.tokens
 
-# Ignore node_modules directory
+# node_modules directory
 /node_modules
+
+# Virtual Environment directory
+/venv
 
