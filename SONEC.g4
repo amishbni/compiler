@@ -2,6 +2,14 @@ grammar SONEC;
 
 program:	(IDENTIFIER | NEWLINE)+;
 
+DEF:		D E F;
+RETURN:		R E T U R N;
+IF:			I F;
+THEN:		T H E N;
+WHILE:		W H I L E;
+END:		E N D;
+BEGIN:		B E G I N;
+
 IDENTIFIER:	[a-zA-Z_][a-zA-Z0-9_]*;
 
 fragment A: 'a' | 'A';
