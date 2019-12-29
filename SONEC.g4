@@ -12,6 +12,16 @@ END:		E N D;
 BEGIN:		B E G I N;
 TRUE:		T R U E;
 FALSE:		F A L S E;
+QUEUE:		Q U E U E;
+STACK:		S T A C K;
+SET:		S E T;
+FEEDBACK:	F E E D B A C K;
+POST:		P O S T;
+LINK:		L I N K;
+NODE:		N O D E;
+BOOL:		B O O L;
+NUMBER:		N U M B E R;
+STRING:		S T R I N G;
 
 IDENTIFIER:	[a-zA-Z_][a-zA-Z0-9_]*;
 
