@@ -1,6 +1,6 @@
 grammar SONEC;
 
-program:	(IDENTIFIER | NEWLINE)+;
+program:	(IDENTIFIER | NEWLINE | SINGLELINE_COMMENT)+;
 
 // Keywords
 DEF:		D E F;
@@ -51,6 +51,8 @@ fragment W: 'w' | 'W';
 fragment X: 'x' | 'X';
 fragment Y: 'y' | 'Y';
 fragment Z: 'z' | 'Z';
+
+SINGLELINE_COMMENT:		'#'~[\r\n]*NEWLINE?;
 
 NEWLINE:	'\r'?'\n';
 
