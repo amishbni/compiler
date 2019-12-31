@@ -52,7 +52,7 @@ fragment X: 'x' | 'X';
 fragment Y: 'y' | 'Y';
 fragment Z: 'z' | 'Z';
 
-NEWLINE:	'\n' | '\r\n';
+NEWLINE:	'\r'?'\n';
 
 WHITESPACE:	[ ]+ -> skip;
 
