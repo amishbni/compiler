@@ -27,11 +27,25 @@ LINK:		L I N K;
 NODE:		N O D E;
 NETWORK:	T E L E G R A M | I N S T A G R A M | T W I T T E R;
 
+// Other
 DEF:		D E F;
 RETURN:		R E T U R N;
 THEN:		T H E N;
 END:		E N D;
 BEGIN:		B E G I N;
+PRINT:		P R I N T;
+INPUT:		I N P U T;
+SOURCE:		S O U R C E;
+SAVE:		S A V E;
+LOAD:		L O A D;
+LEN:		L E N;
+IN:			I N;
+OWNER:		O W N E R;
+DEST:		D E S T I N A T I O N;
+PUSH:		P U S H;
+POP:		P O P;
+WITH:		W I T H;
+CRAWL:		C R A W L;
 
 /* Literals */
 
