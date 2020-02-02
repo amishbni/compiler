@@ -11,6 +11,16 @@ stmts:		stmt |
 			stmt NEWLINE stmts |
 			NEWLINES stmt NEWLINE stmts;
 
+art_exp:	O_PARAN art_exp C_PARAN |
+			art_exp MUL art_exp	|
+			art_exp DIV	art_exp |
+			art_exp MOD art_exp |
+			art_exp PLUS art_exp |
+			art_exp SUB art_exp |
+			FLOAT | DECIMAL | HEX |
+			LEN O_PARAN ID C_PARAN |
+			ID;
+
 /* Tokens */
 /* Keywords */
 
