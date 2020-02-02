@@ -61,6 +61,17 @@ HEX:		'0x'[0-9a-fA-F]+;
 // String
 CHARS:		'"' (~["\r\n])* '"';
 
+
+/* Symbols */
+O_BRACE:	'{';
+C_BRACE:	'}';
+
+O_PARAN:	'(';
+C_PARAN:	')';
+
+O_BRACKET:	'[';
+C_BRACKET:	']';
+
 IDENTIFIER:	[a-zA-Z_][a-zA-Z0-9_]*;
 
 fragment A: 'a' | 'A';
