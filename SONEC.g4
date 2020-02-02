@@ -111,7 +111,7 @@ NEWLINE:	'\r'?'\n';
 
 WHITESPACE:	[ ]+ -> skip;
 
-IDENTIFIER:	[a-zA-Z_][a-zA-Z0-9_]*;
+ID:			[a-zA-Z_][a-zA-Z0-9_]*;
 
 fragment A: 'a' | 'A';
 fragment B: 'b' | 'B';
