@@ -1,6 +1,6 @@
 grammar SONEC;
 
-program:	(CHARS)+;
+program:	(S_COMMENT | M_COMMENT)+;
 
 /* Keywords */
 
@@ -103,6 +103,14 @@ LEQ:		'<=';
 // ASSIGNMENT
 ASSIGN:		'=';
 
+/* Comments */
+M_COMMENT:	'##'(('\n' | .)*?)'##'NEWLINE;
+S_COMMENT:	'#'((.)*?)NEWLINE;
+
+NEWLINE:	'\r'?'\n';
+
+WHITESPACE:	[ ]+ -> skip;
+
 IDENTIFIER:	[a-zA-Z_][a-zA-Z0-9_]*;
 
 fragment A: 'a' | 'A';
@@ -131,11 +139,4 @@ fragment W: 'w' | 'W';
 fragment X: 'x' | 'X';
 fragment Y: 'y' | 'Y';
 fragment Z: 'z' | 'Z';
-
-SINGLELINE_COMMENT: '#'((.)*?)NEWLINE;
-MULTILINE_COMMENT: '##'(('\n' | .)*?)'##'NEWLINE;
-
-NEWLINE:	'\r'?'\n';
-
-WHITESPACE:	[ ]+ -> skip;
 
