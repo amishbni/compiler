@@ -1,6 +1,6 @@
 grammar SONEC;
 
-program:	(IDENTIFIER | NEWLINE | SINGLELINE_COMMENT | MULTILINE_COMMENT)+;
+program:	(CHARS)+;
 
 /* Keywords */
 
@@ -32,8 +32,20 @@ RETURN:		R E T U R N;
 THEN:		T H E N;
 END:		E N D;
 BEGIN:		B E G I N;
+
+/* Literals */
+
+// Logical
 TRUE:		T R U E;
 FALSE:		F A L S E;
+
+// Numerical
+FLOAT:		([0-9]+'.'[0-9]*) | ([0-9]*'.'[0-9]+);
+DECIMAL:	[0-9]+;
+HEX:		'0x'[0-9a-fA-F]+;
+
+// String
+CHARS:		'"' (~["\r\n])* '"';
 
 IDENTIFIER:	[a-zA-Z_][a-zA-Z0-9_]*;
 
