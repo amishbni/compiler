@@ -1,15 +1,67 @@
 grammar SONEC;
 
-program:	(S_COMMENT | M_COMMENT)+;
+program:	stmts*;
 
 /* Grammars */
 /* Statements */
+
 stmts:		stmt |
 			NEWLINES stmt |
 			stmt NEWLINES |
 			NEWLINES stmt NEWLINES |
 			stmt NEWLINE stmts |
 			NEWLINES stmt NEWLINE stmts;
+
+stmt:		if_stmt | for_stmt | while_stmt | print | initialize | save | load | crawl | push | pop | return;
+
+if_stmt:	IF logic_exp COLON NEWLINE indent stmts NEWLINE dedent ELSE COLON NEWLINE indent stmts NEWLINE dedent |
+			IF rel_exp COLON NEWLINE indent stmts NEWLINE dedent ELSE COLON NEWLINE indent stmts NEWLINE dedent;
+
+for_stmt:	FOR ID IN ID COLON NEWLINE stmts;
+
+while_stmt:	WHILE O_PARAN logic_exp	C_PARAN COLON NEWLINE stmts |
+			WHILE O_PARAN rel_exp	C_PARAN COLON NEWLINE stmts |
+			WHILE logic_exp COLON NEWLINE stmts					|
+			WHILE rel_exp COLON NEWLINE stmts;
+
+print:		PRINT O_PARAN CHARS		C_PARAN |
+			PRINT O_PARAN ID 		C_PARAN |
+			PRINT O_PARAN logic_exp C_PARAN |
+			PRINT O_PARAN rel_exp	C_PARAN |
+			PRINT O_PARAN art_exp	C_PARAN;
+
+initialize:	INIT NETWORK WITH CHARS;
+
+save:		SAVE ID IN CHARS;
+
+load:		LOAD CHARS;
+
+crawl:		CRAWL NODE ID |
+			CRAWL POSTS ID |
+			CRAWL FEEDBACKS ID |
+			CRAWL INLINKS ID |
+			CRAWL OUTLINKS ID;
+
+push:		PUSH ID IN ID;
+
+pop:		POP ID;
+
+return:		RETURN logic_exp |
+			RETURN rel_exp |
+			RETURN art_exp |
+			RETURN CHARS;
+
+logic_exp:	O_PARAN logic_exp C_PARAN |
+			NOT logic_exp |
+			logic_exp AND logic_exp |
+			logic_exp OR logic_exp |
+			logic_exp XOR logic_exp |
+			NOT rel_exp |
+			rel_exp AND rel_exp |
+			rel_exp OR rel_exp |
+			rel_exp XOR rel_exp |
+			TRUE | FALSE
+			ID;
 
 rel_exp:	O_PARAN rel_exp C_PARAN |
 			art_exp EQU art_exp |
