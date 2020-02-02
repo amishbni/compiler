@@ -2,26 +2,37 @@ grammar SONEC;
 
 program:	(IDENTIFIER | NEWLINE | SINGLELINE_COMMENT | MULTILINE_COMMENT)+;
 
-// Keywords
+/* Keywords */
+
+// Conditional keywords
+FOR:		F O R;
+WHILE:		W H I L E;
+IF:			I F;
+ELSE:		E L S E;
+
+// Type keywords
+NUMBER:		N U M B E R;
+STRING:		S T R I N G;
+BOOL:		B O O L;
+QUEUE:		Q U E U E;
+STACK:		S T A C K;
+SET:		S E T;
+FEEDBACKS:	F E E D B A C K S;
+FEEDBACK:	F E E D B A C K;
+POSTS:		P O S T S;
+POST:		P O S T;
+OUTLINKS:	O U T G O I N G '-' L I N K S;
+INLINKS:	I N G O I N G '-' L I N K S;
+LINK:		L I N K;
+NODE:		N O D E;
+
 DEF:		D E F;
 RETURN:		R E T U R N;
-IF:			I F;
 THEN:		T H E N;
-WHILE:		W H I L E;
 END:		E N D;
 BEGIN:		B E G I N;
 TRUE:		T R U E;
 FALSE:		F A L S E;
-QUEUE:		Q U E U E;
-STACK:		S T A C K;
-SET:		S E T;
-FEEDBACK:	F E E D B A C K;
-POST:		P O S T;
-LINK:		L I N K;
-NODE:		N O D E;
-BOOL:		B O O L;
-NUMBER:		N U M B E R;
-STRING:		S T R I N G;
 
 IDENTIFIER:	[a-zA-Z_][a-zA-Z0-9_]*;
 
