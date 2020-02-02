@@ -2,6 +2,16 @@ grammar SONEC;
 
 program:	(S_COMMENT | M_COMMENT)+;
 
+/* Grammars */
+/* Statements */
+stmts:		stmt |
+			NEWLINES stmt |
+			stmt NEWLINES |
+			NEWLINES stmt NEWLINES |
+			stmt NEWLINE stmts |
+			NEWLINES stmt NEWLINE stmts;
+
+/* Tokens */
 /* Keywords */
 
 // Conditional keywords
@@ -108,6 +118,7 @@ M_COMMENT:	'##'(('\n' | .)*?)'##'NEWLINE;
 S_COMMENT:	'#'((.)*?)NEWLINE;
 
 NEWLINE:	'\r'?'\n';
+NEWLINES:   ('\r'?'\n')+;
 
 WHITESPACE:	[ ]+ -> skip;
 
