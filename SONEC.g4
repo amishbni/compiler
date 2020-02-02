@@ -25,6 +25,7 @@ OUTLINKS:	O U T G O I N G '-' L I N K S;
 INLINKS:	I N G O I N G '-' L I N K S;
 LINK:		L I N K;
 NODE:		N O D E;
+NETWORK:	T E L E G R A M | I N S T A G R A M | T W I T T E R;
 
 DEF:		D E F;
 RETURN:		R E T U R N;
