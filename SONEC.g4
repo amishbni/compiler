@@ -11,6 +11,14 @@ stmts:		stmt |
 			stmt NEWLINE stmts |
 			NEWLINES stmt NEWLINE stmts;
 
+rel_exp:	O_PARAN rel_exp C_PARAN |
+			art_exp EQU art_exp |
+			art_exp NEQ art_exp |
+			art_exp GTR art_exp |
+			art_exp LSS art_exp |
+			art_exp GEQ art_exp |
+			art_exp LEQ art_exp;
+
 art_exp:	O_PARAN art_exp C_PARAN |
 			art_exp MUL art_exp	|
 			art_exp DIV	art_exp |
