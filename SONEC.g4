@@ -72,6 +72,8 @@ C_PARAN:	')';
 O_BRACKET:	'[';
 C_BRACKET:	']';
 
+COLON:		':';
+
 IDENTIFIER:	[a-zA-Z_][a-zA-Z0-9_]*;
 
 fragment A: 'a' | 'A';
