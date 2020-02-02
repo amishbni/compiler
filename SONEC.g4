@@ -39,6 +39,7 @@ SOURCE:		S O U R C E;
 SAVE:		S A V E;
 LOAD:		L O A D;
 LEN:		L E N;
+INIT:		I N I T I A L I Z E;
 IN:			I N;
 OWNER:		O W N E R;
 DEST:		D E S T I N A T I O N;
