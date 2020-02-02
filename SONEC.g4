@@ -23,6 +23,8 @@ POSTS:		P O S T S;
 POST:		P O S T;
 OUTLINKS:	O U T G O I N G '-' L I N K S;
 INLINKS:	I N G O I N G '-' L I N K S;
+OUTLINK:	O U T G O I N G '-' L I N K;
+INLINK:		I N G O I N G '-' L I N K;
 LINK:		L I N K;
 NODE:		N O D E;
 NETWORK:	T E L E G R A M | I N S T A G R A M | T W I T T E R;
