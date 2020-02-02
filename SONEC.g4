@@ -74,6 +74,32 @@ C_BRACKET:	']';
 
 COLON:		':';
 
+/* Operands */
+
+// Arithmetic
+MUL:		'*';
+DIV:		'/';
+MOD:		'%';
+PLUS:		'+';
+SUB:		'-';
+
+// Logical
+NOT:		N O T;
+AND:		A N D;
+OR:			O R;
+XOR:		X O R;
+
+// Relational
+EQU:		'==';
+NEQ:		'!=';
+GTR:		'>';
+LSS:		'<';
+GEQ:		'>=';
+LEQ:		'<=';
+
+// ASSIGNMENT
+ASSIGN:		'=';
+
 IDENTIFIER:	[a-zA-Z_][a-zA-Z0-9_]*;
 
 fragment A: 'a' | 'A';
